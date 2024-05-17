@@ -1,193 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="image_functionality.js"></script>
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
-</section>
+    <header id="menu">
+        <nav>
+          <img src="images/memoryLogo.jpg" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#photos">My Photos</a></li>
+                <li><a href="#playlist">My Playlist</a></li>
+                <li><a href="#like">Like</a></li>
+                <li><a href="#qrcoder">QR Code</a></li>
+                <li><a href="#spa">Q&A</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
-</section>
+    <main>
+        <section id="about" class="section">
+            <h2>About Rubin Simon</h2>
+            <!-- <p>Brief description of the adult – history, resume, hobbies, interests, a person who influenced him/her throughout his/her life, etc.</p> -->
+            <p>Rubin Simon was a family man with a wife, two daughters and three granddaughters.<br>
+              He was a great Dentist, and even worked until he was eighty.<br>
+              He was born in Romania, and made Aliyah in the 50s.<br>
+              He loved to hang out with his close friends, travel, and watch basketball games.<br>
+              He was a loving grandfather who i loved so much.<br>
+              Passed away in January 2024.
+            </p>
+        </section>
 
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
-</section>
+        <section id="photos" class="section">
+          <h2>Rubin's Photos</h2>
+          <div class="photo-slider">
+              <div class="slide">
+                  <img src="images/image1.jpeg" alt="Photo 1">
+                  <figcaption>Me And My Family</figcaption>
+              </div>
+              <div class="slide">
+                  <img src="images/image2.jpeg" alt="Photo 2">
+                  <figcaption>Me And My Wife</figcaption>
+              </div>
+              <div class="slide">
+                  <img src="images/image3.jpeg" alt="Photo 3">
+                  <figcaption>Me In My Daughter's Wedding</figcaption>
+              </div>
+          </div>
+          <div class="slider-buttons">
+              <button class="prev">&#10094;</button>
+              <button class="next">&#10095;</button>
+          </div>
+      </section>
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
-</section>
+        <section id="playlist" class="section">
+            <h2>Rubin's Favorite Song</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ILtz5nX3_fc?si=nr1BeYE2wLzXLfRe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </section>
 
-<section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
-</section>
+        <section id="like" class="section">
+            <h2>Give this page a Like!</h2>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2F127.0.0.1%3A5500%2Findex.html&width=450&layout&action&size&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <!-- <button id="likeButton">Like</button>
+            <p id="likeCount">0 Likes</p> -->
+        </section>
 
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
+        <section id="qrcoder" class="section">
+            <h2>QR Code</h2>
+            <p>Scan this QR code to visit my website:</p>
+            <img src="qrcode.png" alt="QR Code">
+        </section>
 
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
-</section>
+        <section id="spa" class="section">
+            <h2>Q&A</h2>
+            <p>Detail three main differences between web1, web2, and web3. Explain the differences with an example of a use case scenario.</p>
+        </section>
 
+        <section id="contact" class="section">
+          <h2>Contact Me</h2>
+          <div id="form-messages"></div>
+          <form id="contactForm">
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="message">Your Message:</label>
+              <textarea id="message" name="message" required></textarea>
+              <label for="smiley">Choose a Smiley:</label>
+              <select id="smiley" name="smiley">
+                  <option value="😊">😊</option>
+                  <option value="😂">😂</option>
+                  <option value="😍">😍</option>
+              </select>
+              <button type="submit">Send</button>
+          </form>
+      </section>
+    </main>
 
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#menu a").click(function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 500);
+            });
+
+            var likeCount = 0;
+            $("#likeButton").click(function() {
+                likeCount++;
+                $("#likeCount").text(likeCount + " Likes");
+            });
+
+            // Ensure the menu is always visible and floating
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('#menu').addClass('floating-menu');
+                } else {
+                    $('#menu').removeClass('floating-menu');
+                }
+            });
+         // Form validation
+         $('#contactForm').submit(function(e) {
+                e.preventDefault();
+                var email = $('#email').val();
+                var message = $('#message').val();
+                var smiley = $('#smiley').val();
+                var isValid = true;
+                var errorMessage = '';
+
+                // Email validation
+                if (!email) {
+                    isValid = false;
+                    errorMessage += 'Email is required.<br>';
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    isValid = false;
+                    errorMessage += 'Invalid email format.<br>';
+                }
+
+                // Message validation
+                if (!message) {
+                    isValid = false;
+                    errorMessage += 'Message is required.<br>';
+                }
+
+                if (isValid) {
+                    $('#form-messages').html('<p class="success">Your message has been sent successfully!</p>');
+                    $('#contactForm')[0].reset();
+                } else {
+                    $('#form-messages').html('<p class="error">' + errorMessage + '</p>');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

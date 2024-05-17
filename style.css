@@ -1,7 +1,207 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+/* Resetting default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    background: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 10px 0; /* Add some vertical padding */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+	flex-grow: 1; /* Allow ul to grow */
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center;
+    width: 100%; /* Make nav take full width */
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+/* Floating menu styles */
+.floating-menu {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Main content styles */
+main {
+    padding-top: 60px; /* to prevent content from being hidden behind the fixed header */
+}
+
+.section {
+    padding: 50px;
+    margin: 20px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Photo slider styles */
+.photo-slider {
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+}
+
+.slide:first-child {
+    display: block; /* Show the first slide by default */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 80%; /* Align vertically centered */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    z-index: 100;
+}
+
+.prev {
+    left: 100px; /* Adjust the left distance */
+}
+
+.next {
+    right: 820px; /* Adjust the right distance */
+}
+
+/* Form styles */
+/* figure {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+figure img {
+    max-width: 10%;
+	max-height: 10;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+} */
+
+.slide img {
+    /* width: auto; 
+    max-width: 30%; 
+    height: auto;
+    min-width: 30px;
+    object-fit: contain; */
+    max-width: 500px; /* Set maximum width */
+    max-height: 400px; /* Set maximum height */
+    width: auto; /* Allow the width to adjust while maintaining aspect ratio */
+    height: auto; /* Allow the height to adjust while maintaining aspect ratio */
+    object-fit: contain; /* Ensure the entire image fits within its container */
+	
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm label,
+#contactForm input,
+#contactForm textarea,
+#contactForm select,
+#contactForm button {
+    margin-bottom: 10px;
+}
+
+#contactForm input,
+#contactForm textarea,
+#contactForm select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contactForm button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contactForm button:hover {
+    background: #555;
+}
+
+.logo {
+    /* width: 50px; 
+    height: 70px; 
+    margin-left: 30px; 
+	margin-top: 30px;
+	display: inline-block; 
+    vertical-align: middle; */
+	width: 100px;
+    height: 50px; /* Adjust the height of the logo to match the toolbar */
+    margin-left: 10px; /* Add some space between the logo and the navigation */
+}
+
+/* Success message styles */
+.success {
+    color: #3c763d; /* Dark green color for text */
+    background-color: #dff0d8; /* Light green background color */
+    border: 1px solid #3c763d; /* Dark green border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* Error message styles */
+.error {
+    color: #d8000c; /* Red color */
+    background-color: #ffd2d2; /* Light red background */
+    border: 1px solid #d8000c;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
