@@ -233,15 +233,8 @@ figure img {
 	display: none; /* Hide prev and next buttons by default */
   }
   
-  @media only screen and (max-width: 600px) {
-	.prev, .next {
-	  display: block; /* Show prev and next buttons on small screens */
-	  position: absolute;
-	  top: 50%; /* Center vertically */
-	  transform: translateY(-50%);
-	}
-  }
-  /* Initially hide the hamburger menu icon */
+
+/* Initially hide the hamburger menu icon */
 .menu-icon {
     display: none;
 }
@@ -269,9 +262,13 @@ figure img {
   }
 
   .mobile-menu {
-    display: flex; /* Show the mobile menu on small screens */
+    display: none; /* Hide the mobile menu by default */
     flex-direction: column;
     align-items: center;
+  }
+
+  .mobile-menu.open {
+    display: flex; /* Show the mobile menu when open */
   }
 
   .mobile-menu li {
