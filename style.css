@@ -14,11 +14,28 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+nav {
     display: flex;
     align-items: center; /* Center items vertically */
-    padding: 10px 0; /* Add some vertical padding */
+    justify-content: space-between; /* Distribute items along the main axis, pushing them to the start and end */
+    width: 100%; /* Make nav take full width */
 }
+
+.logo {
+    width: auto; /* Adjust width to fit content */
+    height: 50px; /* Maintain height */
+    margin-left: 10px; /* Add some space between logo and navigation */
+}
+
+/* .logo {
+     width: auto; 
+    height: 50px; 
+    margin-left: 10px;  
+} */
 
 nav ul {
     list-style: none;
@@ -26,14 +43,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-	flex-grow: 1; /* Allow ul to grow */
-}
-
-nav {
-    display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: center;
-    width: 100%; /* Make nav take full width */
+    flex-grow: 1;
 }
 
 nav li {
@@ -94,7 +104,7 @@ h2 {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 80%; /* Align vertically centered */
+    top: 50%; /* Center vertically */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -104,11 +114,11 @@ h2 {
 }
 
 .prev {
-    left: 100px; /* Adjust the left distance */
+    left: 10px; /* Adjust the left distance */
 }
 
 .next {
-    right: 820px; /* Adjust the right distance */
+    right: 10px; /* Adjust the right distance */
 }
 
 /* Form styles */
@@ -120,7 +130,7 @@ h2 {
 
 figure img {
     max-width: 10%;
-	max-height: 10;
+    max-height: 10;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 } */
@@ -136,7 +146,6 @@ figure img {
     width: auto; /* Allow the width to adjust while maintaining aspect ratio */
     height: auto; /* Allow the height to adjust while maintaining aspect ratio */
     object-fit: contain; /* Ensure the entire image fits within its container */
-	
 }
 
 #contactForm {
@@ -172,18 +181,6 @@ figure img {
 
 #contactForm button:hover {
     background: #555;
-}
-
-.logo {
-    /* width: 50px; 
-    height: 70px; 
-    margin-left: 30px; 
-	margin-top: 30px;
-	display: inline-block; 
-    vertical-align: middle; */
-	width: 100px;
-    height: 50px; /* Adjust the height of the logo to match the toolbar */
-    margin-left: 10px; /* Add some space between the logo and the navigation */
 }
 
 /* Success message styles */
