@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rubin Simon Website</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="image_functionality.js"></script>
+    <script src="page_functionality.js"></script>
 </head>
 <body>
   <header id="menu">
@@ -39,13 +37,12 @@
     <main>
         <section id="about" class="section">
             <h2>About Rubin Simon</h2>
-            <!-- <p>Brief description of the adult – history, resume, hobbies, interests, a person who influenced him/her throughout his/her life, etc.</p> -->
             <p>Rubin Simon was a family man with a wife, two daughters and three granddaughters.<br>
               He was a great Dentist, and even worked until he was eighty.<br>
               He was born in Romania, and made Aliyah in the 50s.<br>
               He loved to hang out with his close friends, travel, and watch basketball games.<br>
               He was a loving grandfather who i loved so much.<br>
-              Passed away in January 2024.
+              Passed away in March 2024.
             </p>
         </section>
         <section id="photos" class="section">
@@ -68,10 +65,6 @@
             <img src="images/image3.jpeg" style="width:100%">
             <div class="text">At My Daughter's Wedding</div>
           </div>
-        
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
         
@@ -82,27 +75,6 @@
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
-        <!-- <section id="photos" class="section">
-          <h2>Rubin's Photos</h2>
-          <div class="photo-slider">
-              <div class="slide">
-                  <img src="images/image1.jpeg" alt="Photo 1">
-                  <figcaption>Me And My Family</figcaption>
-              </div>
-              <div class="slide">
-                  <img src="images/image2.jpeg" alt="Photo 2">
-                  <figcaption>Me And My Wife</figcaption>
-              </div>
-              <div class="slide">
-                  <img src="images/image3.jpeg" alt="Photo 3">
-                  <figcaption>Me In My Daughter's Wedding</figcaption>
-              </div>
-          </div>
-          <div class="slider-buttons">
-              <button class="prev">&#10094;</button>
-              <button class="next">&#10095;</button>
-          </div>
-      </section> -->
 
         <section id="playlist" class="section">
             <h2>Rubin's Favorite Song</h2>
@@ -126,7 +98,36 @@
 
         <section id="spa" class="section">
             <h2>Q&A</h2>
-            <p>Detail three main differences between web1, web2, and web3. Explain the differences with an example of a use case scenario.</p>
+            <table>
+              <tr>
+                  <td></td>
+                  <td>Web 1</td>
+                  <td>Web 2</td>
+                  <td>Web 3</td>
+                  <td>Use case: query search for "side effects of medications"</td>
+              </tr>
+              <tr>
+                  <td>Trust and Security</td>
+                  <td>Relies on centralized authorities for content verification, posing risks of misinformation and security breaches.</td>
+                  <td>Implements user feedback and moderation for trust-building, but still relies on central intermediaries for data management.</td>
+                  <td>Prioritizes trustlessness and security through decentralized architectures, leveraging blockchain for transparent, tamper-resistant transactions and data storage.</td>
+                  <td>Web1-Users must trust the credibility of static web pages managed by centralized entities, with potential risks of outdated or biased information. Web2- Trust is built through community feedback and platform moderation, but relies on central platforms to manage and secure data. Web3- Trust is ensured through decentralized blockchain technology, offering transparent, secure, and tamper-resistant access to verified information about medication side effects.</td>
+              </tr>
+              <tr>
+                  <td>User Participation and Control</td>
+                  <td>Users passively consume content without contributing or controlling information.</td>
+                  <td>Empowers users to generate and share content, fostering community engagement and interaction.</td>
+                  <td>Gives users ownership of data and digital assets, allowing for selective sharing and control over personal information.</td>
+                  <td>Web1-Users can only read the information provided by website owners with no opportunity to add or modify content. Web2- Users actively contribute by sharing experiences and engaging in discussions about medication side effects on social platforms and forums. Web- Users control their own health data, choosing to share it selectively with trusted entities while accessing decentralized, user-verified information about medication side effects.</td>
+              </tr>
+              <tr>
+                  <td>Technology Stack</td>
+                  <td>Uses basic HTML for static web pages with limited interactivity.</td>
+                  <td>Introduces dynamic content with JavaScript, AJAX, and APIs, enabling interactive user experiences.</td>
+                  <td>Leverages blockchain and decentralized technologies for secure, transparent, and peer-to-peer interactions.</td>
+                  <td>Web1- The search results would display static HTML pages with basic information about medication side effects. The content is text-heavy and non-interactive. Web2- Results would include dynamic, interactive content like user reviews, forums, and social media posts where people share their personal experiences with medication side effects. Personalized health apps might also provide tailored information. Web3- Search results would come from decentralized platforms with verified, tamper-proof data stored on blockchain. Users could access anonymized, trustworthy medical records and research studies securely.</td>
+              </tr>
+          </table>
         </section>
 
         <section id="contact" class="section">
@@ -147,19 +148,9 @@
           </form>
       </section>
     </main>
-    <!-- <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="gSOVAJDj"></script> -->
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $(document).ready(function() {
-        $('.nav-dot').click(function() {
-    // Get the index of the clicked dot
-    var dotIndex = $(this).index();
-
-    // Trigger click event on the corresponding radio button
-    $('#slide' + (dotIndex + 1)).click();
-});
-
           $('.menu-icon').click(function() {
               $('.mobile-menu').toggleClass('open'); // Toggle the 'open' class
           });
@@ -178,18 +169,18 @@
       
           // Smooth scrolling for menu links
           $("#menu a").click(function(e) {
-    e.preventDefault();
-    var target = $(this).attr('href');
-    var offset = $(target).offset().top;
+            e.preventDefault();
+            var target = $(this).attr('href');
+            var offset = $(target).offset().top;
 
-    // Adjust the offset to account for any fixed headers or other elements
-    var headerHeight = $('#menu').outerHeight(); // Get the height of the header
-    offset -= headerHeight; // Subtract the header height from the offset
+            // Adjust the offset to account for any fixed headers or other elements
+            var headerHeight = $('#menu').outerHeight(); // Get the height of the header
+            offset -= headerHeight; // Subtract the header height from the offset
 
-    $('html, body').animate({
-        scrollTop: offset
-    }, 500);
-});
+            $('html, body').animate({
+                scrollTop: offset
+            }, 500);
+        });
       
           // Ensure the menu is always visible and floating
           $(window).scroll(function() {
@@ -240,16 +231,16 @@
         }
           });
       });
+      document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.fb-like').addEventListener('click', function() {
+          // Replace 'buttonToClick' with the ID or class of the button you want to click
+          document.getElementById('buttonToClick').click();
+      });
+  });
     </script>
+  <div id="fb-root"></div> 
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script> -->
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.fb-like').addEventListener('click', function() {
-        // Replace 'buttonToClick' with the ID or class of the button you want to click
-        document.getElementById('buttonToClick').click();
-    });
-});
-</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script> -->
 </body>
 </html>
