@@ -214,15 +214,67 @@ figure img {
 }
 
 @media only screen and (max-width: 600px) {
-  .prev, .next {
-    display: block; /* Show prev and next buttons on small screens */
-    position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%);
+	nav ul {
+	  display: none; /* Hide the navigation links by default */
+	}
+  
+	.menu-icon {
+	  display: block; /* Show the menu icon */
+	  cursor: pointer; /* Add cursor pointer */
+	}
+  
+	.expanded {
+	  display: block; /* Show the expanded menu when active */
+	}
   }
+  
+  /* Mobile-Friendly Slider */
+  .prev, .next {
+	display: none; /* Hide prev and next buttons by default */
+  }
+  
+  @media only screen and (max-width: 600px) {
+	.prev, .next {
+	  display: block; /* Show prev and next buttons on small screens */
+	  position: absolute;
+	  top: 50%; /* Center vertically */
+	  transform: translateY(-50%);
+	}
+  }
+  /* Initially hide the hamburger menu icon */
+.menu-icon {
+    display: none;
 }
 
-/* YouTube Video */
-iframe {
-  max-width: 100%; /* Ensure YouTube iframe doesn't overflow */
+/* Show the desktop menu */
+.desktop-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide the mobile menu */
+.mobile-menu {
+    display: none;
+}
+
+/* Responsive Toolbar */
+@media only screen and (max-width: 600px) {
+  .desktop-menu {
+    display: none; /* Hide the desktop menu on small screens */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon */
+    cursor: pointer; /* Add cursor pointer */
+  }
+
+  .mobile-menu {
+    display: flex; /* Show the mobile menu on small screens */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-menu li {
+    margin: 10px 0;
+  }
 }
