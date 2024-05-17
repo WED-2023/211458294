@@ -113,7 +113,7 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="gSOVAJDj"></script> -->
 
     <script type="text/javascript">
-      $(document).ready(function() {
+$(document).ready(function() {
     $('.menu-icon').click(function() {
         $('.mobile-menu').toggleClass('open'); // Toggle the 'open' class
     });
@@ -123,6 +123,11 @@
         if (!$(event.target).closest('.menu-icon, .mobile-menu').length) {
             $('.mobile-menu').removeClass('open'); // Remove the 'open' class
         }
+    });
+
+    // Close the mobile menu when clicking on a menu item
+    $('.mobile-menu a').click(function() {
+        $('.mobile-menu').removeClass('open'); // Remove the 'open' class
     });
         // $(document).ready(function() {
         //     $("#menu a").click(function(e) {
