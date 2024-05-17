@@ -109,11 +109,14 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ILtz5nX3_fc?si=nr1BeYE2wLzXLfRe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </section>
 
-        <section id="like" class="section">
-            <h2>Give this page a Like!</h2>
-            <!-- <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FRomania.org%3Flocale%3Dhe_IL&width=450&layout&action&size&share=false&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>         -->
-            <!-- <div class="fb-like" data-href="https://www.facebook.com/Romania.org?locale=he_IL" data-width="" data-layout="" data-action="" data-size="" data-share="false"></div> -->
-            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fkanipbc%3Flocale%3Dhe_IL&width=450&layout&action&size&share=false&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>          </section>
+          <section id="like" class="section">
+            <h2>Give Rubin's favorite basketball team a Like!</h2>
+            <!-- Replace 'buttonToClick' with the ID or class of the button you want to click -->
+            <div>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmaccabitlv%3Flocale%3Dhe_IL&tabs&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+            <div class="fb-like" data-href="https://www.facebook.com/maccabitlv?locale=he_IL" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+        </section>
 
         <section id="qrcoder" class="section">
             <h2>QR Code</h2>
@@ -216,13 +219,36 @@
               }
       
               if (isValid) {
-                  $('#form-messages').html('<p class="success">Your message has been sent successfully!</p>');
-                  $('#contactForm')[0].reset();
-              } else {
-                  $('#form-messages').html('<p class="error">' + errorMessage + '</p>');
-              }
+            // Construct mailto link
+            var subject = encodeURIComponent('Message from Rubin Simon Website');
+            var body = encodeURIComponent('Email: ' + email + '\nMessage: ' + message + '\nSmiley: ' + smiley);
+            var mailtoLink = 'mailto:support@example.com?subject=' + subject + '&body=' + body;
+
+            // Open default mail app with mailto link
+            window.location.href = mailtoLink;
+
+            $('#form-messages').html('<p class="success">You are redirected to you mail app!</p>');
+            $('#contactForm')[0].reset();
+        } else {
+            $('#form-messages').html('<p class="error">' + errorMessage + '</p>');
+        }
           });
       });
     </script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.fb-like').addEventListener('click', function() {
+        // Replace 'buttonToClick' with the ID or class of the button you want to click
+        document.getElementById('buttonToClick').click();
+    });
+});
+
+function openFacebook() {
+    var facebookUrl = 'https://www.facebook.com';
+    window.open(facebookUrl, '_blank');
+}
+</script>
 </body>
 </html>
